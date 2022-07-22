@@ -1,0 +1,4 @@
+set_io A1 34 #SW1
+set_io B1 37 #LED0
+set_io A2 33 #SW2
+set_io B2 38 #LED1

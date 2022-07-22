@@ -1,7 +1,7 @@
 #----------------------------------------
 #-- Establecer nombre del componente
 #----------------------------------------
-NAME = Fport
+NAME = Fport_extra
 
 
 

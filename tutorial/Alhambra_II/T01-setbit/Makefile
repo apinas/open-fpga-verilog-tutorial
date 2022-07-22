@@ -26,7 +26,7 @@ sint: setbit.bin
 setbit_tb.vcd: setbit.v setbit_tb.v
 
 	#-- Compilar
-	iverilog -o setbit_tb.out setbit.v setbit_tb.v
+	iverilog setbit.v setbit_tb.v -o setbit_tb.out
 
 	#-- Simular
 	./setbit_tb.out
