@@ -1,0 +1,26 @@
+Ficheros .pcf -> Constrains
+Ficheros .v   -> Codigo verilog, si acaba en _tb es testbench
+Ficheros .out -> Ejecuta la simulación y genera el fichero .vcd
+Fichero .vcd  -> Contiene el resultado de la aplicación, puede visualizarse con GTK Wave
+Fichero .gtkw -> Contiene la configuración del visualizador de señales
+
+---Simulación
+ 1. Compilar
+	iverilog <nombre>.v <nombre>_tb.v -o  <nombre>_tb.out
+ 2. Simular (Esto generará el fichero con los resultados .vcd)
+	./<nombre>_tb.out
+ 3. Ver simulación
+	gtkwave <nombre>_tb.vcd &
+
+---Sintesis Completa
+ 1. Sintesis
+	yosys -p 'synth_ice40 -top <nombre> -json <nombre>.json' <nombre>.v
+ 2. Place n route
+	nextpnr-ice40 --hx8k --package tq144:4k --json <nombre>.json --pcf <nombre>.pcf --asc <nombre>.asc
+ 3. Bitfile
+	icepack <nombre>.asc <nombre>.bin
+
+---Programar FPGA
+	iceprog -d i:0x0403:0x6010:0 <nombre>.bin
+			ó
+	iceprog <nombre>.bin
