@@ -11,7 +11,7 @@ wire clk;
 reg [3:0] data = 0;
 
 //-- Parametro para el prescaler
-parameter N = 22;
+parameter N = 20;
 
 //-- Reloj de salida del prescaler
 wire clk_pres;

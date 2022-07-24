@@ -19,7 +19,7 @@ reg [3:0] counter_check = 0;
 
 
 //-- Instanciar el contador, con prescaler de 1 bit (para la simulacion)
-counter4 #(.N(1))
+counter4 #(.N(3))
   C1(
 	  .clk(clk),
 	  .data(data)
