@@ -8,7 +8,7 @@
 module prescaler_tb();
 
 //-- Numero de bits del prescaler a comprobar
-parameter N = 2;
+parameter N = 4;
 
 //-- Registro para generar la señal de reloj
 reg clk = 0;

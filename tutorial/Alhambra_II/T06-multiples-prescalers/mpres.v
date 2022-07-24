@@ -22,11 +22,12 @@ wire D4;
 //-- Parametros del componente
 //-- Bits para los diferentes prescalers
 //-- Cambiar estos valores segun la secuencia a sacar por los leds
-parameter N0 = 21;  //-- Prescaler base
-parameter N1 = 1;
-parameter N2 = 2;
-parameter N3 = 1;
-parameter N4 = 2;
+//parameter N0 = 21;  //-- Prescaler base
+parameter N0 = 22;    //Periodo aprox 350ms
+parameter N1 = 1;	//Periodo aprox 700ms
+parameter N2 = 3;	//Periodo aprox 1,4 s	
+parameter N3 = 3;	//Periodo aprox 2.8 s
+parameter N4 = 1;	//Periodo aprox 5.6 s
 
 //-- Cable con señal de reloj base: la salida del prescaler 0
 wire clk_base;

@@ -6,7 +6,7 @@ Fichero .gtkw -> Contiene la configuración del visualizador de señales
 
 ---Simulación
  1. Compilar
-	iverilog <nombre>.v <nombre>_tb.v -o  <nombre>_tb.out
+	iverilog <nombre>.v [<deps>.v] <nombre>_tb.v -o  <nombre>_tb.out
  2. Simular (Esto generará el fichero con los resultados .vcd)
 	./<nombre>_tb.out
  3. Ver simulación
@@ -14,7 +14,7 @@ Fichero .gtkw -> Contiene la configuración del visualizador de señales
 
 ---Sintesis Completa
  1. Sintesis
-	yosys -p 'synth_ice40 -top <nombre> -json <nombre>.json' <nombre>.v
+	yosys -p 'synth_ice40 -top <nombre> -json <nombre>.json' <nombre>.v [<deps>.v]
  2. Place n route
 	nextpnr-ice40 --hx8k --package tq144:4k --json <nombre>.json --pcf <nombre>.pcf --asc <nombre>.asc
  3. Bitfile
