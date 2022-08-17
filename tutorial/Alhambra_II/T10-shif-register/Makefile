@@ -1,7 +1,7 @@
 #----------------------------------------
 #-- Establecer nombre del componente
 #----------------------------------------
-NAME = shift4
+NAME = shift8
 DEPS = prescaler.v
 
 
