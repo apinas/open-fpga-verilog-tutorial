@@ -16,7 +16,7 @@ parameter N = 22;
 wire clk_base;
 
 //-- Datos del registro
-reg [3:0] dout = 0;
+reg [3:0] dout = 4'b1010;
 
 //-- Cable de entrada al registro
 wire [3:0] din;
