@@ -1,7 +1,7 @@
 #----------------------------------------
 #-- Establecer nombre del componente
 #----------------------------------------
-NAME = mux4
+NAME = mux8
 DEPS = prescaler.v
 
 
